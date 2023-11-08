@@ -9,7 +9,7 @@ export const Footer: FC = () => {
 			<Image
 				src="/images/footer-bg.png"
 				alt="footer"
-				width={1350}
+				width={1920}
 				height={200}
 				className={styles.bg}
 			/>
@@ -35,8 +35,8 @@ export const Footer: FC = () => {
 							<Image
 								src="/images/fluent-emoji-high-contrast_telephone.png"
 								alt="tel"
-								width={40}
-								height={30}
+								width={48}
+								height={51}
 							/>
 							+380938319410
 						</Link>
@@ -46,8 +46,8 @@ export const Footer: FC = () => {
 							<Image
 								src="/images/material-symbols_mail-sharp.png"
 								alt="email"
-								width={40}
-								height={32}
+								width={48}
+								height={39}
 							/>
 							pcservicekiev142@gmail.com
 						</Link>

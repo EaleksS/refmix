@@ -9,8 +9,8 @@ export const Service: FC<IData> = ({ title, bg, img }) => {
 			<Image
 				src={bg ? bg : ""}
 				alt="bg"
-				width={480}
-				height={480}
+				width={387}
+				height={350}
 				className={styles.bg}
 			/>
 
