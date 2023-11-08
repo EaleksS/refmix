@@ -6,7 +6,7 @@ export const Guarantee: FC = () => {
 	return (
 		<section className={styles.section} >
 			<div className={styles.left}>
-				<Image src="/images/g-left.png" alt="left" width={600} height={300} />
+				<Image src="/images/g-left.png" alt="left" width={640} height={315} />
 				<Image
 					src="/images/finger.png"
 					alt="left"
@@ -17,7 +17,7 @@ export const Guarantee: FC = () => {
 				<h2>Викликати Майстра</h2>
 			</div>
 			<div className={styles.right}>
-				<Image src="/images/g-right.png" alt="left" width={600} height={300} />
+				<Image src="/images/g-right.png" alt="left" width={640} height={315} />
 				<Image
 					src="/images/finger.png"
 					alt="left"

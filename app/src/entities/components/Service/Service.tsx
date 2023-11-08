@@ -15,7 +15,7 @@ export const Service: FC<IData> = ({ title, bg, img }) => {
 			/>
 
 			<div className={styles.title}>
-				<h3>{title}</h3>
+				<h2>{title}</h2>
 				{/* <Image src={img ? img : ""} alt="png" width={200} height={133} /> */}
 			</div>
 		</article>

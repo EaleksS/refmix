@@ -9,8 +9,8 @@ export const Footer: FC = () => {
 			<Image
 				src="/images/footer-bg.png"
 				alt="footer"
-				width={1920}
-				height={397}
+				width={1350}
+				height={200}
 				className={styles.bg}
 			/>
 			<footer className={styles.footer}>
@@ -57,8 +57,8 @@ export const Footer: FC = () => {
 			<Image
 				src="/images/Ellipse.png"
 				alt="ellips"
-				width={600}
-				height={600}
+				width={640}
+				height={636}
 				className={styles.ellips}
 			/>
 			<div className={styles.phoneg}>
