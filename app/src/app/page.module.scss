@@ -1,0 +1,23 @@
+.main {
+	max-width: var(--max-width);
+	margin: 40px auto;
+}
+
+.section {
+	h1 {
+		font-size: 52px;
+
+		span {
+			background-image: url("/images/kiew.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: inline-flex;
+			width: 200px;
+			height: 72px;
+			object-fit: cover;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+		}
+	}
+}

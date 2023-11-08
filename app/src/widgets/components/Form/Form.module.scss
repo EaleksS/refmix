@@ -1,0 +1,38 @@
+.section {
+	margin-top: 100px;
+
+	h1 {
+		font-size: 50px;
+		gap: 25px;
+	}
+
+	.form {
+		border: 1px solid #000;
+		border-radius: 20px;
+		padding: 20px;
+		width: 515px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		button {
+			width: 200px;
+		}
+
+		label {
+			display: flex;
+			flex-direction: column;
+
+			gap: 10px;
+
+			input {
+				border: 1px solid #000;
+				outline: none;
+				padding: 0 20px;
+				height: 48px;
+				border-radius: 12px;
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+
+	.finger {
+		position: absolute;
+		z-index: 1;
+		bottom: -60px;
+	}
+
+	.left {
+		position: relative;
+
+		h2 {
+			position: absolute;
+			top: calc(50% - 20px);
+			right: 30px;
+			color: #fff;
+			font-size: 24px;
+		}
+
+		.finger {
+			right: 20px;
+		}
+
+		&::after {
+			content: "Низькі ціни";
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(20px, 120px) rotate(-45deg);
+			font-size: 24px;
+		}
+	}
+	.right {
+		position: relative;
+
+		h2 {
+			position: absolute;
+			top: calc(50% - 20px);
+			left: 30px;
+			color: #fff;
+			font-size: 24px;
+		}
+
+		.finger {
+			transform: scaleX(-1);
+			left: 20px;
+		}
+
+		&::after {
+			content: "Гарантія 3 роки";
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(-20px, 120px) rotate(45deg);
+			font-size: 24px;
+		}
+	}
+}
