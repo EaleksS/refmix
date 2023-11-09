@@ -6,6 +6,7 @@ import { Services } from "./components/Services/Services";
 import { Orderliness } from "./components/Orderliness/Orderliness";
 import { Footer } from "./components/Footer/Footer";
 import { Form } from "./components/Form/Form";
+import { Reviews } from "./components/Reviews/Reviews";
 
 export {
 	Header,
@@ -16,4 +17,5 @@ export {
 	Orderliness,
 	Footer,
 	Form,
+	Reviews,
 };

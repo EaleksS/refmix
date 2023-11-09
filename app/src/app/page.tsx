@@ -1,5 +1,12 @@
 import styles from "./page.module.scss";
-import { About, Form, Guarantee, Orderliness, Services } from "@/widgets";
+import {
+	About,
+	Form,
+	Guarantee,
+	Orderliness,
+	Reviews,
+	Services,
+} from "@/widgets";
 
 export default function Home() {
 	return (
@@ -15,6 +22,7 @@ export default function Home() {
 				<About />
 				<Services />
 				<Orderliness />
+				<Reviews />
 				<Form />
 			</main>
 		</>

@@ -32,7 +32,7 @@ export const Header: FC<Props> = ({ line = false }) => {
 								height={40}
 							/>
 							<span>
-								+380938319410 <b>зворотний дзвінок</b>
+								+380938319410 <b>Відгуки зворотній дзвінок</b>
 							</span>
 						</Link>
 					</li>

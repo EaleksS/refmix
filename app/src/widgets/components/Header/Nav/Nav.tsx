@@ -13,7 +13,7 @@ export const Nav: FC = () => {
 					<Link href="#services">Як ми працюємо</Link>
 				</li>
 				<li>
-					<Link href="#services">Відкликання</Link>
+					<Link href="#відгуки">Відкликання</Link>
 				</li>
 			</ul>
 		</nav>

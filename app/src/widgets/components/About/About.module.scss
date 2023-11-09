@@ -1,11 +1,28 @@
 .about {
 	margin-top: 100px;
+
+	@media (max-width: 1280px) {
+		padding: 0 10px;
+		margin-top: 50px;
+	}
+
 	h1 {
 		font-size: 50px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 25px;
+		word-wrap: normal;
+
+		@media (max-width: 800px) {
+			font-size: 30px;
+			line-height: 30px;
+
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
 	}
 
 	ul {
@@ -13,9 +30,20 @@
 		justify-content: space-between;
 		list-style: none;
 
+		flex-wrap: wrap;
+
+		@media (max-width: 800px) {
+			justify-content: center;
+			gap: 20px;
+		}
+
 		li {
 			font-size: 25px;
 			font-weight: 600;
+
+			@media (max-width: 800px) {
+				font-size: 16px;
+			}
 		}
 	}
 }

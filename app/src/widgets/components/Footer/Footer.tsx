@@ -6,13 +6,6 @@ import Image from "next/image";
 export const Footer: FC = () => {
 	return (
 		<section className={styles.section}>
-			<Image
-				src="/images/footer-bg.png"
-				alt="footer"
-				width={1920}
-				height={200}
-				className={styles.bg}
-			/>
 			<footer className={styles.footer}>
 				<Image src="/images/logo2.png" alt="logo" width={200} height={62} />
 				<nav>
@@ -25,7 +18,7 @@ export const Footer: FC = () => {
 							<Link href="#orderline">Як ми працюємо</Link>
 						</li>
 						<li>
-							<Link href="#">Відгуки</Link>
+							<Link href="#відгуки">Відгуки</Link>
 						</li>
 					</ul>
 				</nav>

@@ -4,6 +4,10 @@
 	justify-content: center;
 	margin-top: 100px;
 
+	@media (max-width: 1200px) {
+		display: none;
+	}
+
 	.finger {
 		position: absolute;
 		z-index: 1;

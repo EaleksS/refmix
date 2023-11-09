@@ -4,8 +4,14 @@
 	align-items: center;
 	justify-content: space-between;
 
-	&.line {
-		border-bottom: 2px solid var(--red);
+	@media (max-width: 1280px) {
+		padding: 0 10px;
+	}
+
+	@media (max-width: 500px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
 	}
 }
 
@@ -28,6 +34,7 @@
 					b {
 						border: 1px solid #000;
 						border-radius: 10px;
+						padding: 0 5px;
 						font-size: 14px;
 						display: flex;
 						justify-content: center;
