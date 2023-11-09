@@ -5,12 +5,13 @@ import styles from "./Form.module.scss";
 import { Button } from "@/shared";
 import Input from "react-phone-number-input/input";
 import { myAction } from "./actions";
+import { toast } from "react-toastify";
 
 export const Form: FC = () => {
 	const [valuePhone, setValuePhone] = useState<string | undefined>("");
 
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id="form">
 			<h1>Залишились питання?</h1>
 
 			<form action={myAction} className={styles.form}>
@@ -30,7 +31,16 @@ export const Form: FC = () => {
 						name="email"
 					/>
 				</label>
-				<Button disabled={!valuePhone}>Відправити</Button>
+				<Button
+					disabled={!valuePhone}
+					onClick={() => {
+						valuePhone &&
+							toast.success("заявку прийнято, очікуйте дзвінка") &&
+							setValuePhone("");
+					}}
+				>
+					Відправити
+				</Button>
 			</form>
 		</section>
 	);

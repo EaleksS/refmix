@@ -4,6 +4,8 @@ import "@/globalStyles/globals.css";
 import "@/globalStyles/normalize.css";
 import { Footer, Header } from "@/widgets";
 import styles from "./page.module.scss";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const fira = Fira_Code({
 	subsets: ["greek"],
@@ -29,6 +31,17 @@ export default function RootLayout({
 				</section>
 				{children}
 				<Footer />
+				<ToastContainer
+					position="top-left"
+					autoClose={5000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss
+					draggable
+					pauseOnHover
+				/>
 			</body>
 		</html>
 	);

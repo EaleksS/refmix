@@ -1,11 +1,16 @@
+"use client";
+
 import { FC } from "react";
 import styles from "./Guarantee.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export const Guarantee: FC = () => {
+	const router = useRouter();
+
 	return (
 		<section className={styles.section}>
-			<div className={styles.left}>
+			<div className={styles.left} onClick={() => router.push("/#form")}>
 				<Image
 					src="/images/g-left.png"
 					alt="left"
@@ -23,7 +28,7 @@ export const Guarantee: FC = () => {
 				/>
 				<h2>Викликати Майстра</h2>
 			</div>
-			<div className={styles.right}>
+			<div className={styles.right} onClick={() => router.push("/#form")}>
 				<Image
 					src="/images/g-right.png"
 					alt="left"
