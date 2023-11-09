@@ -44,11 +44,12 @@ export const Reviews: FC = () => {
 			>
 				{[0, 1, 3, 4, 5].map((e) => (
 					<SwiperSlide key={e}>
-						<article key={e} className={styles.article}>
+						<article className={styles.article}>
 							<h2>Виїхали, зробили, ціна приємних питань немає!</h2>
 							<div className={styles.rates}>
 								{[0, 1, 2, 3, 4].map((e) => (
 									<Image
+										key={e}
 										src="/images/Star 1.svg"
 										alt="star"
 										width={40}
