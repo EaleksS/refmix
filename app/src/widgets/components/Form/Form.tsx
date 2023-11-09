@@ -34,9 +34,7 @@ export const Form: FC = () => {
 				<Button
 					disabled={!valuePhone}
 					onClick={() => {
-						valuePhone &&
-							toast.success("заявку прийнято, очікуйте дзвінка") &&
-							setValuePhone("");
+						valuePhone && toast.success("заявку прийнято, очікуйте дзвінка");
 					}}
 				>
 					Відправити
