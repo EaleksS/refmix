@@ -41,6 +41,10 @@
 			gap: 5px;
 			margin-top: 50px;
 
+			@media (max-width: 800px) {
+				margin-top: 30px;
+			}
+
 			h2 {
 				margin-top: 10px;
 				margin-left: 20px;
