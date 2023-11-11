@@ -2,11 +2,7 @@
 
 import { FC, useState } from "react";
 import styles from "./Services.module.scss";
-import { Service } from "@/entities";
-import { Button, Modal } from "@/shared";
-import Input from "react-phone-number-input/input";
-import { toast } from "react-toastify";
-import { myAction } from "../Form/actions";
+import { FormModal, Service } from "@/entities";
 
 export interface IData {
 	title: string;
@@ -63,7 +59,6 @@ const data: IData[] = [
 ];
 
 export const Services: FC = () => {
-	const [valuePhone, setValuePhone] = useState<string | undefined>("");
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	return (
@@ -85,46 +80,7 @@ export const Services: FC = () => {
 					</span>
 				</h1>
 			</section>
-			<Modal
-				isOpen={isOpen}
-				classNameContent={styles.content}
-				onClose={setIsOpen}
-			>
-				<form action={myAction} className={styles.form}>
-					<h2>
-						Залишьн контактні данні і ми зв{"'"}яжемося з вами в найближчий час
-					</h2>
-
-					<label>
-						<p>Як до Вас звертатися?</p>
-						<input
-							type="text"
-							placeholder="Впишіть ім'я"
-							name="name"
-							required
-						/>
-					</label>
-					<label>
-						<p>Ваш телефон</p>
-						<Input
-							defaultCountry="UA"
-							value={valuePhone}
-							placeholder="Впишіть ваш телефон"
-							onChange={setValuePhone}
-							name="email"
-						/>
-					</label>
-					<Button
-						disabled={!valuePhone}
-						onClick={() => {
-							valuePhone && toast.success("заявку прийнято, очікуйте дзвінка");
-						}}
-						className={styles.btn}
-					>
-						Відправити
-					</Button>
-				</form>
-			</Modal>
+			<FormModal isOpen={isOpen} setIsOpen={setIsOpen} />
 		</>
 	);
 };
