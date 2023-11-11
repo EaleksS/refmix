@@ -1,0 +1,46 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background: rgba($color: #000000, $alpha: 0.3);
+
+	display: flex;
+	align-items: center;
+
+	.content {
+		width: 450px;
+		background: #fff;
+		min-height: 300px;
+		margin: 0 auto;
+		padding: 32px;
+		border-radius: 32px;
+		background-image: url("/images/Форма-обратной-связи-вызов-мастера.webp");
+		background-repeat: no-repeat;
+		object-fit: cover;
+		background-size: cover;
+		position: relative;
+
+		@media (max-width: 510px) {
+			width: 100%;
+			margin: 0 10px;
+		}
+
+		.close {
+			position: absolute;
+			top: 0;
+			right: -30px;
+			background: #fff;
+			padding: 3px;
+			border-radius: 50%;
+			cursor: pointer;
+
+			@media (max-width: 510px) {
+				right: 0;
+				top: -30px;
+			}
+		}
+	}
+}

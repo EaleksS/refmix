@@ -1,6 +1,12 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 import styles from "./Services.module.scss";
 import { Service } from "@/entities";
+import { Button, Modal } from "@/shared";
+import Input from "react-phone-number-input/input";
+import { toast } from "react-toastify";
+import { myAction } from "../Form/actions";
 
 export interface IData {
 	title: string;
@@ -57,15 +63,68 @@ const data: IData[] = [
 ];
 
 export const Services: FC = () => {
-	return (
-		<section className={styles.section} id="services">
-			<h1>Наші послуги</h1>
+	const [valuePhone, setValuePhone] = useState<string | undefined>("");
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 
-			<div className={styles.items}>
-				{data.map((e) => (
-					<Service key={e.title} {...e} />
-				))}
-			</div>
-		</section>
+	return (
+		<>
+			<section className={styles.section} id="services">
+				<h1>Наші послуги</h1>
+
+				<div className={styles.items} onClick={() => setIsOpen(true)}>
+					{data.map((e) => (
+						<Service key={e.title} {...e} />
+					))}
+				</div>
+			</section>
+			<section className={styles.section}>
+				<h1>
+					Хочу викликати майстра!
+					<span onClick={() => setIsOpen((prev) => !prev)}>
+						Залишити заявку
+					</span>
+				</h1>
+			</section>
+			<Modal
+				isOpen={isOpen}
+				classNameContent={styles.content}
+				onClose={setIsOpen}
+			>
+				<form action={myAction} className={styles.form}>
+					<h2>
+						Залишьн контактні данні і ми зв'яжемося з вами в найближчий час
+					</h2>
+
+					<label>
+						<p>Як до Вас звертатися?</p>
+						<input
+							type="text"
+							placeholder="Впишіть ім'я"
+							name="name"
+							required
+						/>
+					</label>
+					<label>
+						<p>Ваш телефон</p>
+						<Input
+							defaultCountry="UA"
+							value={valuePhone}
+							placeholder="Впишіть ваш телефон"
+							onChange={setValuePhone}
+							name="email"
+						/>
+					</label>
+					<Button
+						disabled={!valuePhone}
+						onClick={() => {
+							valuePhone && toast.success("заявку прийнято, очікуйте дзвінка");
+						}}
+						className={styles.btn}
+					>
+						Відправити
+					</Button>
+				</form>
+			</Modal>
+		</>
 	);
 };

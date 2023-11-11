@@ -42,6 +42,7 @@ export default function RootLayout({
 					draggable
 					pauseOnHover
 				/>
+				<div id="modals"></div>
 			</body>
 		</html>
 	);
