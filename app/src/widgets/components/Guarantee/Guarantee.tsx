@@ -17,6 +17,7 @@ export const Guarantee: FC = () => {
 					width={640}
 					height={315}
 					priority
+					className={styles.img_main}
 				/>
 				<Image
 					src="/images/finger.png"
@@ -35,6 +36,7 @@ export const Guarantee: FC = () => {
 					width={640}
 					height={315}
 					priority
+					className={styles.img_main}
 				/>
 				<Image
 					src="/images/finger.png"

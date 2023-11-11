@@ -78,7 +78,7 @@ export const Services: FC = () => {
 				</div>
 			</section>
 			<section className={styles.section}>
-				<h1>
+				<h1 className={styles.asd}>
 					Хочу викликати майстра!
 					<span onClick={() => setIsOpen((prev) => !prev)}>
 						Залишити заявку
