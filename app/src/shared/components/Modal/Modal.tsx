@@ -28,16 +28,16 @@ export const Modal: FC<Props> = ({
 	onClose,
 	isOpen = false,
 }) => {
-	const el = document.createElement("div");
+	const el = global.window && document.createElement("div");
 	const wrapper: React.RefObject<HTMLElement> = useRef(el);
 
 	useEffect(() => {
 		const current = wrapper.current as HTMLElement;
 		current.setAttribute("id", "overlay");
-		document.body.appendChild(current);
+		global.window && document.body.appendChild(current);
 
 		return () => {
-			document.body.removeChild(current);
+			global.window && document.body.removeChild(current);
 		};
 	}, []);
 
